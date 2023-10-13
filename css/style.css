@@ -1,0 +1,23 @@
+:root {
+    --clr-accent: #568EA3;
+    --clr-rgba: #FFFFFF;
+}
+
+/*
+@font-face {
+    font-family: ;
+    src: url();
+}
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--clr-rgba);
+}
+
+header {
+    color: var(--clr-accent);
+}
