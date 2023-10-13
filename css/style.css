@@ -10,6 +10,12 @@
 }
 */
 
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -18,6 +24,19 @@ body {
     background-color: var(--clr-rgba);
 }
 
-header {
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*
+    HOME
+*/
+
+#home {
     color: var(--clr-accent);
 }
