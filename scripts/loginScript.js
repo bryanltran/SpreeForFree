@@ -3,6 +3,17 @@ function attemptLogin()
     // Retrieve user data
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
+
+    // Check if username is a valid username
+    if (JSON.parse(localStorage.getItem(username)) === null)
+    {
+        alert("Invalid username. Please try again.");
+    }
+    // Username is valid, check if password matches the username
+    else 
+    {
+
+    }
 }
 
 function createAccount()
