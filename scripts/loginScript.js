@@ -17,7 +17,19 @@ function createAccount()
     // Check if the username is available
     if (JSON.parse(localStorage.getItem(username_CA)) === null)
     {
-
+        // Check if the password matches the re-entered password
+        if (password_CA === password_confirm)
+        {
+            // Save user data to local storage
+            var userData = {pw: password_CA, fn: first_name, ln: last_name};
+            localStorage.setItem(username_CA, JSON.stringify(userData));
+            alert("Account successfully created!");
+        }
+        // Passwords do not match
+        else
+        {
+            alert("Passwords do not match. Please try again.");
+        }
     }
     // Username is unavailable
     else
