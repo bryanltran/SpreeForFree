@@ -13,4 +13,15 @@ function createAccount()
     var username_CA = document.getElementById("username_CA").value;
     var password_CA = document.getElementById("password_CA").value;
     var password_confirm = document.getElementById("passwordConfirm").value;
+
+    // Check if the username is available
+    if (JSON.parse(localStorage.getItem(username_CA)) === null)
+    {
+
+    }
+    // Username is unavailable
+    else
+    {
+        alert("The username is already taken. Please try again.");
+    }
 }
