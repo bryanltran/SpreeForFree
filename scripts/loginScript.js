@@ -12,7 +12,16 @@ function attemptLogin()
     // Username is valid, check if password matches the username
     else 
     {
-
+        // Entered successful pair of information
+        if (JSON.parse(localStorage.getItem(username)).pw === password)
+        {
+            alert("Login successful!");
+        }
+        // Invalid password entered
+        else
+        {
+            alert("Invalid password. Please try again.");
+        }
     }
 }
 
