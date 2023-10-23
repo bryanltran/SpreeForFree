@@ -25,6 +25,9 @@
                 <li class="navbar__item">
                     <a href="../pages/about.html" class="navbar__link">About</a>
                 </li>
+                <li class="navbar__item">
+                    <a href="../pages/login.html" class="navbar__link">Account</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -32,22 +35,22 @@
     <!-- * * * * * * * * * * MAIN * * * * * * * * * * -->
 
     <main>
-        <h1 id="login">Create New Account</h1>
-        <form>
-            <p><label for="firstname">First Name:</label></p>
+        <h1 class="login">Create New Account</h1>
+        <form id="createAccountForm">
+            <p><label for="firstname" id="fnLabel">First Name:</label></p>
             <p><input type="text" name="firstname" placeholder="Enter first name..." id="firstname" required></p>
-            <p><label for="lastname">Last Name:</label></p>
+            <p><label for="lastname" id="lnLabel">Last Name:</label></p>
             <p><input type="text" name="lastname" placeholder="Enter last name..." id="lastname" required></p>
-            <p><label for="username_CA">Username:</label></p>
+            <p><label for="username_CA" id="userCALabel">Username:</label></p>
             <p><input type="text" name="username_CA" placeholder="Enter username..." id="username_CA" required></p>
-            <p><label for="password_CA">Password:</label></p>
+            <p><label for="password_CA" id="passCALabel">Password:</label></p>
             <p><input type="password" name="password_CA" placeholder="Enter password..." id="password_CA" required></p>
-            <p><label for="passwordConfirm">Re-enter Password:</label></p>
+            <p><label for="passwordConfirm" id="passConfirmLabel">Re-enter Password:</label></p>
             <p><input type="password" name="passwordConfirm" placeholder="Re-enter password..." id="passwordConfirm" required></p>
 
-            <button onclick="createAccount()" type="submit">Create Account</button>
+            <button onclick="return createAccount()" type="submit" id="caButton">Create Account</button>
 
-            <p><label for="login_return">Return to login page: </label><input type="button" onclick="location.href='../pages/login.html';" value="Login" name="login_return" id="login_return"></p>
+            <p><label for="login_return" id="loginReturnButton">Return to login page: </label><input type="button" onclick="location.href='../pages/login.html';" value="Login" name="login_return" id="login_return"></p>
         </form>
     </main>
 

@@ -4,49 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./scripts/script.js" defer></script>
-
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../scripts/loginScript.js"></script>
     
-    <title>Spree For Free</title>
+    <title>My Account</title>
 </head>
 <body>
 
     <!-- * * * * * * * * * * HEADER * * * * * * * * * * -->
-    
+
     <header class="header" id="header">
         <nav class="navbar" id="navbar">
             <ul class = "navbar__links">
                 <li class="navbar__item">
-                    <a href="index.html" class="navbar__link">Home</a>
+                    <a href="../pages/userHome.html" class="navbar__link">Home</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="pages/catalog.html" class="navbar__link">Catalog</a>
+                    <a href="../pages/catalog.html" class="navbar__link">Catalog</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="pages/about.html" class="navbar__link">About</a>
+                    <a href="../pages/about.html" class="navbar__link">About</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="pages/login.html" class="navbar__link">Account</a>
+                    <a href="../pages/account.html" class="navbar__link">Account</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <!-- * * * * * * * * * * HOME * * * * * * * * * * -->
+    <!-- * * * * * * * * * * MAIN * * * * * * * * * * -->
     
-    <section class="home" id="home">
-        <div class="section__header">
-            <h1 class="section__heading">
-                SPREE FOR FREE
-            </h1>
-        </div>
-    </section>
+    <main>
+        <h1 class="login" id="myAccountTitle">My Account</h1>
+        <p id="accountInfo"></p>
+        <script>
+            outputAccountInfo();
+        </script>
+        <button onclick="return attemptLogOut()" type="submit" id="logOutButton">Log Out</button>
+        <br>
+        <button onclick="return deleteAccount()" type="submit" id="deleteAccButton">Delete My Account</button>
+    </main>
 
-    <!-- * * * * * * * * * * FEATURED * * * * * * * * * * -->
-    <section class="featured" id="featured">
-
-    </section>
     <!-- * * * * * * * * * * FOOTER * * * * * * * * * * -->
      
      <footer class="footer" id="footer">
@@ -55,4 +53,6 @@
             <a href="https://github.com/bryanltran/SpreeForFree" rel="noopener noreferrer" target="_blank">GITHUB RESPOSITORY</a>
         </div>
      </footer>
+
 </body>
+</html>
