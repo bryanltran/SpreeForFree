@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="./scripts/script.js" defer></script>
     <script src="../scripts/loginScript.js"></script>
-
     
-    <title>About</title>
+    <title>My Account</title>
 </head>
 <body>
 
     <!-- * * * * * * * * * * HEADER * * * * * * * * * * -->
-    
+
     <header class="header" id="header">
         <nav class="navbar" id="navbar">
             <ul class = "navbar__links">
@@ -32,13 +30,22 @@
                 </li>
             </ul>
         </nav>
-        <h1>
-            About
-        </h1>
     </header>
 
+    <!-- * * * * * * * * * * MAIN * * * * * * * * * * -->
     
-     <!-- * * * * * * * * * * FOOTER * * * * * * * * * * -->
+    <main>
+        <h1 class="login" id="myAccountTitle">My Account</h1>
+        <p id="accountInfo"></p>
+        <script>
+            outputAccountInfo();
+        </script>
+        <button onclick="return attemptLogOut()" type="submit" id="logOutButton">Log Out</button>
+        <br>
+        <button onclick="return deleteAccount()" type="submit" id="deleteAccButton">Delete My Account</button>
+    </main>
+
+    <!-- * * * * * * * * * * FOOTER * * * * * * * * * * -->
      
      <footer class="footer" id="footer">
         <div class="footer__content">
@@ -46,4 +53,6 @@
             <a href="https://github.com/bryanltran/SpreeForFree" rel="noopener noreferrer" target="_blank">GITHUB RESPOSITORY</a>
         </div>
      </footer>
+
 </body>
+</html>

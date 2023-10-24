@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../scripts/loginScript.js"></script>
+    
+    <title>Create Account Page</title>
+</head>
+<body>
+
+    <!-- * * * * * * * * * * HEADER * * * * * * * * * * -->
+    
+    <header class="header" id="header">
+        <nav class="navbar" id="navbar">
+            <ul class = "navbar__links">
+                <li class="navbar__item">
+                    <a href="../index.html" class="navbar__link">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../pages/catalog.html" class="navbar__link">Catalog</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../pages/about.html" class="navbar__link">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../pages/login.html" class="navbar__link">Account</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- * * * * * * * * * * MAIN * * * * * * * * * * -->
+
+    <main>
+        <h1 class="login">Create New Account</h1>
+        <form id="createAccountForm">
+            <p><label for="firstname" id="fnLabel">First Name:</label></p>
+            <p><input type="text" name="firstname" placeholder="Enter first name..." id="firstname" required></p>
+            <p><label for="lastname" id="lnLabel">Last Name:</label></p>
+            <p><input type="text" name="lastname" placeholder="Enter last name..." id="lastname" required></p>
+            <p><label for="username_CA" id="userCALabel">Username:</label></p>
+            <p><input type="text" name="username_CA" placeholder="Enter username..." id="username_CA" required></p>
+            <p><label for="password_CA" id="passCALabel">Password:</label></p>
+            <p><input type="password" name="password_CA" placeholder="Enter password..." id="password_CA" required></p>
+            <p><label for="passwordConfirm" id="passConfirmLabel">Re-enter Password:</label></p>
+            <p><input type="password" name="passwordConfirm" placeholder="Re-enter password..." id="passwordConfirm" required></p>
+
+            <button onclick="return createAccount()" type="submit" id="caButton">Create Account</button>
+
+            <p><label for="login_return" id="loginReturnButton">Return to login page: </label><input type="button" onclick="location.href='../pages/login.html';" value="Login" name="login_return" id="login_return"></p>
+        </form>
+    </main>
+
+    <!-- * * * * * * * * * * FOOTER * * * * * * * * * * -->
+     
+    <footer class="footer" id="footer">
+        <div class="footer__content">
+            Placeholder Text
+            <a href="https://github.com/bryanltran/SpreeForFree" rel="noopener noreferrer" target="_blank">GITHUB RESPOSITORY</a>
+        </div>
+    </footer>
+
+</body>
+</html>

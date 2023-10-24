@@ -96,3 +96,10 @@ li {
     align-items: center;
     justify-content: center;
 }
+
+/*
+    Login Page
+*/
+.login {
+    padding-top:100px;
+}
