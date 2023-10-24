@@ -22,7 +22,7 @@ function attemptLogin()
             sessionStorage.setItem("Last Name", JSON.parse(localStorage.getItem(username)).ln);
             sessionStorage.setItem("Tokens", JSON.parse(localStorage.getItem(username)).tokens);
             alert("Welcome!");
-            window.location = "../pages/userHome.html";
+            window.location = "../index.html";
             return false;
         }
         // Invalid password entered
@@ -74,23 +74,7 @@ function createAccount()
 function checkIsLoggedIn(pageId)
 {
     // Check which page is being accessed
-    if (pageId === "homeNavBar") 
-    {
-        // User is not logged in
-        if (sessionStorage.getItem("Username") == null)
-        {
-            window.location = "../index.html";
-            return false;
-        }
-        // User is logged in
-        else
-        {
-            window.location = "userHome.html";
-            return false;
-        }
-    }
-    // Check which page is being accessed
-    else if (pageId === "accountNavBar")
+    if (pageId === "accountNavBar")
     {
         // User is not logged in
         if (sessionStorage.getItem("Username") == null)
@@ -105,29 +89,60 @@ function checkIsLoggedIn(pageId)
             return false;
         }
     }
+    // Check which page is being accessed
+    if (pageId === "accountNavBarIdx")
+    {
+        // User is not logged in
+        if (sessionStorage.getItem("Username") == null)
+        {
+            window.location = "pages/login.html";
+            return false;
+        }
+        // User is logged in
+        else
+        {
+            window.location = "pages/account.html";
+            return false;
+        }
+    }
 }
 
 function outputAccountInfo()
 {
+    // Create paragraph elements
     var p1 = document.createElement('p');
     var p2 = document.createElement('p');
+
+    // Add user information to the first paragraph
     p1.innerText="Welcome " + sessionStorage.getItem("First Name") + " " + sessionStorage.getItem("Last Name") + "!";
+    
+    // Add token information to the second paragraph
     p2.innerText="Current Number of Tokens: " + sessionStorage.getItem("Tokens");
+
+    // Add the elements to the page
     document.getElementById("accountInfo").appendChild(p1);
     document.getElementById("accountInfo").appendChild(p2);
 }
 
 function attemptLogOut()
 {
+    // Clear current session data
     sessionStorage.clear();
+
+    // Return to the home page
     window.location = "../index.html";
     return false;
 }
 
 function deleteAccount()
 {
+    // Remove locally stored data
     localStorage.removeItem(sessionStorage.getItem("Username"));
+
+    // Clear current session
     sessionStorage.clear();
+
+    // Return to the home page
     window.location = "../index.html";
     return false;
 }
