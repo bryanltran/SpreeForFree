@@ -45,15 +45,29 @@
     </section>
 
     <!-- * * * * * * * * * * FEATURED * * * * * * * * * * -->
+    <script>
+        window.onload = function () {
+            if (sessionStorage.getItem("Username") == null) {
+                document.getElementById("featured").style.display = "none";
+            }
+        };
+    </script>    
     <section class="featured" id="featured">
+        
+        <h2>Featured Products</h2>
+    
+        <div class="product__list">
 
+        </div>
     </section>
     <!-- * * * * * * * * * * FOOTER * * * * * * * * * * -->
      
      <footer class="footer" id="footer">
         <div class="footer__content">
-            Placeholder Text
+            View the repository for the website!
             <a href="https://github.com/bryanltran/SpreeForFree" rel="noopener noreferrer" target="_blank">GITHUB RESPOSITORY</a>
         </div>
      </footer>
+
+   
 </body>
