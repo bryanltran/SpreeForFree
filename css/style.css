@@ -26,6 +26,11 @@ body {
     background-color: var(--clr-rgba);
 }
 
+section {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 125px 0;
+}
 
 a {
     text-decoration: none;
@@ -44,16 +49,10 @@ li {
     justify-content: space-between;
     padding: 10px;
     height: 80px;
+    width: 100vw;
     background-color: var(--clr-rgba);
 }
 
-#navbar.appear {
-    top: 0px;
-}
-
-#navbar.disappear {
-    top: -100px;
-}
 
 .navbar__links {
     display: flex;
