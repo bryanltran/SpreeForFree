@@ -37,16 +37,16 @@
 
     <!-- * * * * * * * * * * MAIN * * * * * * * * * * -->
     
-    <main>
+    <section class="account__page" id="account__page">
         <h1 class="login" id="myAccountTitle">My Account</h1>
         <p id="accountInfo"></p>
         <script>
             outputAccountInfo();
         </script>
-        <button onclick="return attemptLogOut()" type="submit" id="logOutButton">Log Out</button>
+        <button class="primary-btn" id="primary-btn" onclick="return attemptLogOut()" type="submit" id="logOutButton">Log Out</button>
         <br>
-        <button onclick="return deleteAccount()" type="submit" id="deleteAccButton">Delete My Account</button>
-    </main>
+        <button class="primary-btn" id="primary-btn" onclick="return deleteAccount()" type="submit" id="deleteAccButton">Delete My Account</button>
+    </section>
 
     <!-- * * * * * * * * * * FOOTER * * * * * * * * * * -->
      

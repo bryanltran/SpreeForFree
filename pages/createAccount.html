@@ -37,7 +37,7 @@
 
     <!-- * * * * * * * * * * MAIN * * * * * * * * * * -->
 
-    <main>
+    <section class="create" id="create">
         <div class="account__container" id="account__container">
             <h1 class="login">Create New Account</h1>
             <form id="createAccountForm" action="connect.php" method="post">
@@ -52,12 +52,12 @@
                 <p><label for="passwordConfirm" id="passConfirmLabel">Re-enter Password:</label></p>
                 <p><input type="password" name="passwordConfirm" placeholder="Re-enter password..." id="passwordConfirm" required></p>
 
-                <button onclick="return createAccount()" type="submit" id="caButton">Create Account</button>
+                <button class="primary-btn" id="primary-btn" onclick="return createAccount()" type="submit" id="caButton">Create Account</button>
 
-                <p><label for="login_return" id="loginReturnButton">Return to login page: </label><input type="button" onclick="location.href='../pages/login.html';" value="Login" name="login_return" id="login_return"></p>
+                <p><label for="login_return" id="loginReturnButton">Return to login page: </label><input type="button" class="primary-btn" id="primary-btn" onclick="location.href='../pages/login.html';" value="Login" name="login_return" id="login_return"></p>
             </form>
         </div>
-    </main>
+    </section>
 
     <!-- * * * * * * * * * * FOOTER * * * * * * * * * * -->
      
