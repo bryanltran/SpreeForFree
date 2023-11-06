@@ -223,3 +223,39 @@ li {
     display: flex;
     margin: 40px auto;
 }
+
+#accountButton {
+    display: flex;
+    margin: 0px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.account__page {
+    display: inline-grid;
+    background-color: #93b2c5;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
+    justify-items: center;
+    align-items: center;
+}
+
+.accountInformation {
+    display: flex;
+    margin: 0px auto;
+    color: white;
+}
+
+#accountName {
+    font-size: 30px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+#accountTokens {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
