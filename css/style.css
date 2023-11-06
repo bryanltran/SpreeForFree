@@ -129,13 +129,16 @@ li {
 .login__container {
     display: grid;
     grid-template-columns: auto auto;
-    background-color: yellow;
+    background-color: white;
     justify-items: center;
 }
 
 .loginBox1 {
     display: inline-grid;
-    padding: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
     background-color: #042f5c;
     justify-content: center;
     align-items: center;
@@ -143,7 +146,28 @@ li {
 
 .loginBox2 {
     display: inline-grid;
-    padding: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #93b2c5;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountBox1 {
+    display: inline-grid;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #042f5c;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountBox2 {
+    display: inline-grid;
+    padding-left: 100px;
+    padding-right: 100px;
     background-color: #93b2c5;
     justify-content: center;
     align-items: center;
@@ -163,17 +187,35 @@ li {
     color: white;
 }
 
+.loginLabel3 {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    font-size: 20px;
+    color: white;
+}
+
 .loginInput {
     padding: 10px;
     font-size: 20px;
     color: black;
 }
 
-.loginHeading {
-    display: block;
+.loginInput2 {
+    display: flex;
     margin: 0px auto;
-    font-size: 40px;
+    padding: 5px;
+    font-size: 20px;
+    color: black;
+}
+
+.loginHeading {
+    display: flex;
+    margin: 0px auto;
+    padding-top: 50px;
     padding-bottom: 20px;
+    font-size: 40px;
     color: white;
 }
 
@@ -181,4 +223,3 @@ li {
     display: flex;
     margin: 40px auto;
 }
-

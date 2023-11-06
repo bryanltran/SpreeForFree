@@ -38,24 +38,34 @@
     <!-- * * * * * * * * * * MAIN * * * * * * * * * * -->
 
     <section class="create" id="create">
-        <div class="account__container" id="account__container">
-            <h1 class="login">Create New Account</h1>
-            <form id="createAccountForm" action="connect.php" method="post">
-                <p><label for="firstname" id="fnLabel">First Name:</label></p>
-                <p><input type="text" name="firstname" placeholder="Enter first name..." id="firstname" name="firstname" required></p>
-                <p><label for="lastname" id="lnLabel">Last Name:</label></p>
-                <p><input type="text" name="lastname" placeholder="Enter last name..." id="lastname" name="lastname" required></p>
-                <p><label for="username_CA" id="userCALabel">Username:</label></p>
-                <p><input type="text" name="username_CA" placeholder="Enter username..." id="username_CA" name="username" required></p>
-                <p><label for="password_CA" id="passCALabel">Password:</label></p>
-                <p><input type="password" name="password_CA" placeholder="Enter password..." id="password_CA" name="password" required></p>
-                <p><label for="passwordConfirm" id="passConfirmLabel">Re-enter Password:</label></p>
-                <p><input type="password" name="passwordConfirm" placeholder="Re-enter password..." id="passwordConfirm" required></p>
+        <div class="login__container" id="account__container">
+            <div class="accountBox1" id="accountBox1">
+                <form>
 
-                <button class="primary-btn" id="primary-btn" onclick="return createAccount()" type="submit" id="caButton">Create Account</button>
+                    <p><label class="loginLabel2" for="login_return" id="loginReturnButton">Already have an account?</label></p>
+                    <p><input type="button" class="primary-btn" id="loginButton" onclick="location.href='../pages/login.html';" value="Login" name="login_return"></p>
+                
+                </form>
+            </div> 
+            <div class="accountBox2" id="accountBox2">
+                <h2 class="loginHeading">Create New Account</h2>
+                <form id="createAccountForm" action="connect.php" method="post">
 
-                <p><label for="login_return" id="loginReturnButton">Return to login page: </label><input type="button" class="primary-btn" id="primary-btn" onclick="location.href='../pages/login.html';" value="Login" name="login_return" id="login_return"></p>
-            </form>
+                    <p><label class="loginLabel3" for="firstname" id="fnLabel">First Name:</label></p>
+                    <p><input class="loginInput2" type="text" name="firstname" placeholder="Enter first name..." id="firstname" name="firstname" required></p>
+                    <p><label class="loginLabel3" for="lastname" id="lnLabel">Last Name:</label></p>
+                    <p><input class="loginInput2" type="text" name="lastname" placeholder="Enter last name..." id="lastname" name="lastname" required></p>
+                    <p><label class="loginLabel3" for="username_CA" id="userCALabel">Username:</label></p>
+                    <p><input class="loginInput2" type="text" name="username_CA" placeholder="Enter username..." id="username_CA" name="username" required></p>
+                    <p><label class="loginLabel3" for="password_CA" id="passCALabel">Password:</label></p>
+                    <p><input class="loginInput2" type="password" name="password_CA" placeholder="Enter password..." id="password_CA" name="password" required></p>
+                    <p><label class="loginLabel3" for="passwordConfirm" id="passConfirmLabel">Re-enter Password:</label></p>
+                    <p><input class="loginInput2" type="password" name="passwordConfirm" placeholder="Re-enter password..." id="passwordConfirm" required></p>
+                    
+                    <button class="primary-btn" id="loginButton" onclick="return createAccount()" type="submit">Create Account</button>
+
+                </form>
+            </div>
         </div>
     </section>
 
