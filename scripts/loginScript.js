@@ -60,14 +60,14 @@ function createAccount()
         else
         {
             alert("Passwords do not match. Please try again.");
-            return true;
+            return false;
         }
     }
     // Username is unavailable
     else
     {
         alert("The username is already taken. Please try again.");
-        return true;
+        return false;
     }
 }
 
