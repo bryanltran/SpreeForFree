@@ -126,5 +126,59 @@ li {
     LOGIN
 */
 
+.login__container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: yellow;
+    justify-items: center;
+}
 
+.loginBox1 {
+    display: inline-grid;
+    padding: 100px;
+    background-color: #042f5c;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox2 {
+    display: inline-grid;
+    padding: 100px;
+    background-color: #93b2c5;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginLabel1 {
+    display: flex;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.loginLabel2 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.loginInput {
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.loginHeading {
+    display: block;
+    margin: 0px auto;
+    font-size: 40px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+#loginButton {
+    display: flex;
+    margin: 40px auto;
+}
 
