@@ -114,14 +114,14 @@ function outputAccountInfo()
     var p2 = document.createElement('p');
 
     // Add user information to the first paragraph
-    p1.innerText="Welcome " + sessionStorage.getItem("First Name") + " " + sessionStorage.getItem("Last Name") + "!";
+    p1.innerText="Welcome, " + sessionStorage.getItem("First Name") + " " + sessionStorage.getItem("Last Name") + "!";
     
     // Add token information to the second paragraph
     p2.innerText="Current Number of Tokens: " + sessionStorage.getItem("Tokens");
 
     // Add the elements to the page
-    document.getElementById("accountInfo").appendChild(p1);
-    document.getElementById("accountInfo").appendChild(p2);
+    document.getElementById("accountName").appendChild(p1);
+    document.getElementById("accountTokens").appendChild(p2);
 }
 
 function attemptLogOut()

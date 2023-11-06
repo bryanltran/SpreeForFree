@@ -39,17 +39,25 @@
 
     <section class="main__login" id="main__login">
         <div class="login__container" id="login__container">
-            <h2 class="section__heading">Login</h1>
-            <form class="loginForm" id="loginForm">
-                <p><label for="username" id="userLabel">Username:</label></p>
-                <p><input type="text" name="username" placeholder="Enter username..." id="username"  required></p>
-                <p><label for="password" id="passLabel">Password:</label></p>
-                <p><input type="password" name="password" placeholder="Enter password..." id="password" required></p>
+            <div class="loginBox1">
+                <h2 class="loginHeading">Login</h2>
+                <form class="loginForm" id="loginForm">
+                    <p><label class="loginLabel1" for="username" id="userLabel">Username</label></p>
+                    <p><input class="loginInput" type="text" name="username" placeholder="Enter username..." id="username"  required></p>
+                    <p><label class="loginLabel1" for="password" id="passLabel">Password</label></p>
+                    <p><input class="loginInput" type="password" name="password" placeholder="Enter password..." id="password" required></p>
+                    
+                    <button onclick="return attemptLogin()" type="submit" class="primary-btn" id="loginButton">Login</button>
+                </form>
+            </div>
 
-                <button onclick="return attemptLogin()" type="submit" class="primary-btn" id="primary-btn">Login</button>
+            <div class="loginBox2">
+                <form class="regForm" id="registrationForm">
+                    <p><label class="loginLabel2" for="create_account">Not yet registered?</label></p>
+                    <p><input type="button" class="primary-btn" id="loginButton" onclick="location.href='../pages/createAccount.html';" value="Create Account" name="create_account"></p>
+                </form>
+            </div>
 
-                <p><label for="create_account" id="caLabel">Not yet registered? </label><input type="button" class="primary-btn" id="primary-btn" onclick="location.href='../pages/createAccount.html';" value="Create Account" name="create_account" id="create_account"></p>
-            </form>
         </div>
     </section>
 

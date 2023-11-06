@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../scripts/loginScript.js" defer></script>
+    <script src="../scripts/loginScript.js"></script>
     
     <title>My Account</title>
 </head>
@@ -38,14 +38,15 @@
     <!-- * * * * * * * * * * MAIN * * * * * * * * * * -->
     
     <section class="account__page" id="account__page">
-        <h1 class="login" id="myAccountTitle">My Account</h1>
-        <p id="accountInfo"></p>
+        <h1 class="loginHeading" id="myAccountTitle">My Account</h1>
+        <p class="accountInformation" id="accountName"></p>
+        <p class="accountInformation" id="accountTokens"></p>
         <script>
             outputAccountInfo();
         </script>
-        <button class="primary-btn" id="primary-btn" onclick="return attemptLogOut()" type="submit" id="logOutButton">Log Out</button>
+        <button class="primary-btn" id="accountButton" onclick="return attemptLogOut()" type="submit" id="logOutButton">Log Out</button>
         <br>
-        <button class="primary-btn" id="primary-btn" onclick="return deleteAccount()" type="submit" id="deleteAccButton">Delete My Account</button>
+        <button class="primary-btn" id="accountButton" onclick="return deleteAccount()" type="submit" id="deleteAccButton">Delete My Account</button>
     </section>
 
     <!-- * * * * * * * * * * FOOTER * * * * * * * * * * -->

@@ -126,5 +126,136 @@ li {
     LOGIN
 */
 
+.login__container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+    justify-items: center;
+}
 
+.loginBox1 {
+    display: inline-grid;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #042f5c;
+    justify-content: center;
+    align-items: center;
+}
 
+.loginBox2 {
+    display: inline-grid;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #93b2c5;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountBox1 {
+    display: inline-grid;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #042f5c;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountBox2 {
+    display: inline-grid;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #93b2c5;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginLabel1 {
+    display: flex;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.loginLabel2 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.loginLabel3 {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.loginInput {
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.loginInput2 {
+    display: flex;
+    margin: 0px auto;
+    padding: 5px;
+    font-size: 20px;
+    color: black;
+}
+
+.loginHeading {
+    display: flex;
+    margin: 0px auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    color: white;
+}
+
+#loginButton {
+    display: flex;
+    margin: 40px auto;
+}
+
+#accountButton {
+    display: flex;
+    margin: 0px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.account__page {
+    display: inline-grid;
+    background-color: #93b2c5;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
+    justify-items: center;
+    align-items: center;
+}
+
+.accountInformation {
+    display: flex;
+    margin: 0px auto;
+    color: white;
+}
+
+#accountName {
+    font-size: 30px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+#accountTokens {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
