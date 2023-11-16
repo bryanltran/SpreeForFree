@@ -15,4 +15,4 @@ jobs:
 
 
     - name: Run JavaScript tests
-      run: node test/tests.js
+      run: node tests/test.js
