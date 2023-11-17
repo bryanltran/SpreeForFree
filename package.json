@@ -1,0 +1,12 @@
+{
+    "name": "spree-for-free",
+    "version": "1.0.0",
+    "description": "Basic E-Commerce prototype website",
+    "scripts": {
+      "test": "node tests/test.js"
+    },
+    "devDependencies": {
+      "puppeteer": "^12.0.0" 
+    }
+  }
+  
