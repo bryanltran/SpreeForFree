@@ -3,10 +3,10 @@ name: Continuous Integration
 on:
   push:
     branches:
-      - ci-configuration-1
+      - '*'
   pull_request:
     branches:
-      - 'ci-configuration-1'
+      - '*'
 
 jobs:
   build:
