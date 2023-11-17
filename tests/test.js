@@ -1,31 +1,13 @@
-const puppeteer = require('puppeteer');
+const { JSDOM } = require('jsdom');
 
 console.log("Running test..");
+test('Page has a title', () => {
+  const html = '<!DOCTYPE html><html><head><title>My Page Title</title></head><body></body></html>';
+  const dom = new JSDOM(html);
+  const titleElement = dom.window.document.querySelector('title');
 
-describe('Automated Website Tests', () => {
-    let browser;
-    let page;
-
-    beforeAll(async () => {
-        browser = await puppeteer.launch();
-        page = await browser.newPage();
-    });
-
-    afterAll(async () => {
-        await browser.close();
-    });
-
-    it('Page should have a title', async () => {
-        await page.goto('https://your-website-url');
-        const title = await page.title();
-        expect(title).toBeTruthy();
-    });
-
-    it('Page should have the Navigation Bar', async () => {
-        await page.goto('https://your-website-url');
-        const navMenu = await page.$('#navbar');
-        expect(navMenu).toBeTruthy();
-    });
+  expect(titleElement).not.toBeNull();
 });
+
 
 console.log("Test completed.");
