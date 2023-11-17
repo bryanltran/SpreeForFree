@@ -3,7 +3,10 @@ name: Continuous Integration
 on:
   push:
     branches:
-      - main
+      - ci-configuration-1
+  pull_request:
+    branches:
+      - 'ci-configuration-1'
 
 jobs:
   build:
@@ -12,7 +15,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
 
     - name: Run JavaScript tests
       run: node tests/test.js
