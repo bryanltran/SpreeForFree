@@ -76,6 +76,10 @@ function displayProducts()
             var productHTML = createItemHtml(cartProducts[i]);
             cartContainer.innerHTML += productHTML;
         }
+
+        // Display total cost
+        var totalHTML = createTotalHTML();
+        cartContainer.innerHTML += totalHTML;
     }
 }
 
@@ -150,4 +154,20 @@ function removeProduct(id)
     }
     sessionStorage.setItem("cartProducts", JSON.stringify(cartProd));
     window.location.reload();
+}
+
+function createTotalHTML()
+{
+    var cartTotal = 0;
+    var cartProd = JSON.parse(sessionStorage.getItem("cartProducts"));
+    for (i = 0; i < cartProd.length; i++)
+    {
+        cartTotal = cartTotal + (parseFloat(cartProd[i].price) * cartProd[i].quantity);
+    }
+
+    return `
+        <div class="totalCost">
+            <h3 class="total">Total: ${cartTotal}</h3>
+        </div>
+    `;
 }
