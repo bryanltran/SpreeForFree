@@ -24,7 +24,7 @@ function addProduct(id)
             {
                 // If no items have been added, create a new array and add the current product
                 var cartProd = [];
-                var product = {name: prodMatrix[i][0], price: prodMatrix[i][1], img: prodMatrix[i][2], quantity: 1};
+                var product = {name: prodMatrix[i][0], price: prodMatrix[i][1], img: prodMatrix[i][2], quantity: 1, id: prodMatrix[i][3]};
                 cartProd.push(product);
             }
             else
@@ -43,7 +43,7 @@ function addProduct(id)
                 // If the product is not present in the array, add it
                 if (prodFound === false)
                 {
-                    var product = {name: prodMatrix[i][0], price: prodMatrix[i][1], img: prodMatrix[i][2], quantity: 1};
+                    var product = {name: prodMatrix[i][0], price: prodMatrix[i][1], img: prodMatrix[i][2], quantity: 1, id: prodMatrix[i][3]};
                     cartProd.push(product);
                 }
             }
@@ -51,13 +51,12 @@ function addProduct(id)
             sessionStorage.setItem("cartProducts", JSON.stringify(cartProd));
         }
     }
-    return true;
 }
 
 function displayProducts()
 {
     // No products to display
-    if (JSON.parse(sessionStorage.getItem("cartProducts")) === null)
+    if (JSON.parse(sessionStorage.getItem("cartProducts")) === null || JSON.parse(sessionStorage.getItem("cartProducts")).length === 0)
     {
         // Add empty cart heading
         var cartHeading = createNoProdHTMLHeading();
@@ -78,9 +77,7 @@ function displayProducts()
             cartContainer.innerHTML += productHTML;
         }
     }
-    return true;
 }
-
 
 function createItemHtml(product)
 {
@@ -100,7 +97,7 @@ function createItemHtml(product)
                     <b>${product.quantity}</b>
                 </div>
                 <div class="cartButton">
-                    <button class="cartRemoveButton" type="submit">Remove Item</button>
+                    <button id=${product.id} class="cartRemoveButton" type="submit" onclick="removeProduct(this.id);">Remove Item</button>
                 </div>
             </div>
         </div>
@@ -123,4 +120,34 @@ function createProdHTMLHeading()
             <h3 class="cartHeading">Your cart</h3>
         </div>
     `;
+}
+
+function removeProduct(id)
+{
+    var cartProd = JSON.parse(sessionStorage.getItem("cartProducts"));
+    for (i = 0; i < cartProd.length; i++)
+    {
+        if (cartProd[i].id === id)
+        {
+            // If there is only one of this item, remove it from the cart product
+            if (cartProd[i].quantity === 1)
+            {
+                // Remove element from array
+                cartProd = cartProd.filter(function (element)
+                {
+                    if (element.id != id)
+                    {
+                        return element;
+                    }
+                });
+            }
+            // If there are multiple of the same item, remove one from its respective quantity
+            else
+            {
+                cartProd[i].quantity = cartProd[i].quantity - 1;
+            }
+        }
+    }
+    sessionStorage.setItem("cartProducts", JSON.stringify(cartProd));
+    window.location.reload();
 }

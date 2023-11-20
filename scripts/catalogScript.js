@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <b>${item.price}</b>
                     </div>
                     <div class="addToCart">
-                        <button id=${item.id} class="buttonAddToCart" type="button" onclick="return addProduct(this.id);">
+                        <button id=${item.id} class="buttonAddToCart" type="button" onclick="addProduct(this.id);">
                             <img class="addToCartIcon" src="../img/shoppingcart.png">
                             Add to Cart
                         </button>
