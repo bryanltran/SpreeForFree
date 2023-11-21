@@ -21,6 +21,15 @@ function attemptLogin()
             sessionStorage.setItem("First Name", JSON.parse(localStorage.getItem(username)).fn);
             sessionStorage.setItem("Last Name", JSON.parse(localStorage.getItem(username)).ln);
             sessionStorage.setItem("Tokens", JSON.parse(localStorage.getItem(username)).tokens);
+
+            // On successful login, add previous cart items to current cart if they exist
+            var usernameProd = username.concat(" Products");
+            if (JSON.parse(localStorage.getItem(usernameProd)) != null)
+            {
+                var userCartProd = JSON.parse(localStorage.getItem(usernameProd));
+                sessionStorage.setItem("cartProducts", JSON.stringify(userCartProd));
+            }
+            
             alert("Welcome!");
             window.location = "../index.html";
             return false;
@@ -136,8 +145,12 @@ function attemptLogOut()
 
 function deleteAccount()
 {
+    var currUsername = sessionStorage.getItem("Username");
+    var usernameProducts = currUsername.concat(" Products");
+
     // Remove locally stored data
     localStorage.removeItem(sessionStorage.getItem("Username"));
+    localStorage.removeItem(usernameProducts);
 
     // Clear current session
     sessionStorage.clear();

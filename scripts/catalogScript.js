@@ -1,22 +1,23 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     class CardContent {
-        constructor(img, name, price) {
+        constructor(img, name, price, id) {
             this.img = img;
             this.name = name;
             this.price = price;
+            this.id = id;
         }
     }
     
     const productList = [
-        new CardContent("../img/SpiralNotebook.jpg", "Spiral Notebook", 12.99),
-        new CardContent("../img/Pens.jpg", "Ballpoint Pens", 5.99),
-        new CardContent("../img/highlighters.jpg", "Highlighters", 3.99),
-        new CardContent("../img/backpack.jpg", "Backpack", 28.99),
-        new CardContent("../img/no2pencil.jpg", "No. 2 Pencil", 7.99),
-        new CardContent("../img/calculator.jpg", "Calculator", 10.99),
-        new CardContent("../img/laptop.jpg", "Laptop", 129.99),
-        new CardContent("../img/postit.jpg", "Post-it Notes", 6.99)
+        new CardContent("../img/SpiralNotebook.jpg", "Spiral Notebook", 12.99, "notebookProd"),
+        new CardContent("../img/Pens.jpg", "Ballpoint Pens", 5.99, "penProd"),
+        new CardContent("../img/highlighters.jpg", "Highlighters", 3.99, "highlighterProd"),
+        new CardContent("../img/backpack.jpg", "Backpack", 28.99, "backpackProd"),
+        new CardContent("../img/no2pencil.jpg", "No. 2 Pencil", 7.99, "pencilProd"),
+        new CardContent("../img/calculator.jpg", "Calculator", 10.99, "calculatorProd"),
+        new CardContent("../img/laptop.jpg", "Laptop", 129.99, "laptopProd"),
+        new CardContent("../img/postit.jpg", "Post-it Notes", 6.99, "notesProd")
     ];
     
     
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <b>${item.price}</b>
                     </div>
                     <div class="addToCart">
-                        <button class="buttonAddToCart" type="button">
+                        <button id=${item.id} class="buttonAddToCart" type="button" onclick="addProduct(this.id);">
                             <img class="addToCartIcon" src="../img/shoppingcart.png">
                             Add to Cart
                         </button>
