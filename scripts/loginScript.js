@@ -145,8 +145,12 @@ function attemptLogOut()
 
 function deleteAccount()
 {
+    var currUsername = sessionStorage.getItem("Username");
+    var usernameProducts = currUsername.concat(" Products");
+
     // Remove locally stored data
     localStorage.removeItem(sessionStorage.getItem("Username"));
+    localStorage.removeItem(usernameProducts);
 
     // Clear current session
     sessionStorage.clear();
