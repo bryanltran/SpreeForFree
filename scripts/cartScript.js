@@ -49,6 +49,10 @@ function addProduct(id)
             }
             // Store the cart products
             sessionStorage.setItem("cartProducts", JSON.stringify(cartProd));
+            if (checkSavedCartFeature())
+            {
+                addSessionItemsToSavedCart(cartProd);
+            }   
         }
     }
 }
@@ -152,12 +156,19 @@ function removeProduct(id)
             }
         }
     }
+    // Store updated cart products
     sessionStorage.setItem("cartProducts", JSON.stringify(cartProd));
+    if (checkSavedCartFeature())
+    {
+        addSessionItemsToSavedCart(cartProd);
+    } 
+    // Reload the page
     window.location.reload();
 }
 
 function createTotalHTML()
 {
+    // Calculate the total cost of all items in the cart
     var cartTotal = 0;
     var cartProd = JSON.parse(sessionStorage.getItem("cartProducts"));
     for (i = 0; i < cartProd.length; i++)
@@ -165,9 +176,39 @@ function createTotalHTML()
         cartTotal = cartTotal + (parseFloat(cartProd[i].price) * cartProd[i].quantity);
     }
 
+    // Return HTML to output the total cost
     return `
         <div class="totalCost">
-            <h3 class="total">Total: ${cartTotal}</h3>
+            <h3 class="total">Total: ${cartTotal.toFixed(2)}</h3>
         </div>
     `;
+}
+
+function checkSavedCartFeature()
+{
+    // Check if the user is logged in
+    if (sessionStorage.getItem("Username") != null)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+function addSessionItemsToSavedCart(cartProductsArray)
+{
+    // Update the user's account cart with changes made during this session
+    var username = sessionStorage.getItem("Username");
+    var usernameProd = username.concat(" Products");
+    localStorage.setItem(usernameProd, JSON.stringify(cartProductsArray));
+    if (JSON.parse(localStorage.getItem(usernameProd)) != null)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
