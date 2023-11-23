@@ -175,7 +175,7 @@ function createTotalHTML()
     {
         cartTotal = cartTotal + (parseFloat(cartProd[i].price) * cartProd[i].quantity);
     }
-
+    sessionStorage.setItem("totalCost", cartTotal, JSON.stringify(cartTotal));
     // Return HTML to output the total cost
     return `
         <div class="totalCost">
