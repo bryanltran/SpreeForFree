@@ -1,14 +1,14 @@
 function checkOut() {
     const tokens = parseFloat(sessionStorage.getItem("Tokens"));
     const totalCost = parseFloat(sessionStorage.getItem("totalCost"));
-    
+
     const result = tokens - totalCost;
 
-
-    if(result < 0) {
-        alert("Insufficient Tokens");
+    if (isNaN(result) || result < 0) {
+        alert("Invalid");
         return;
     }
+
     sessionStorage.setItem("Tokens", result);
     updateTotal();
     clearCart();
