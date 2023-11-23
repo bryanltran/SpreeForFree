@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     const productList = [
-        new CardContent("/img/SpiralNotebook.jpg", "Spiral Notebook", 12.99, "notebookProd"),
-        new CardContent("/img/Pens.jpg", "Ballpoint Pens", 5.99, "penProd"),
-        new CardContent("/img/highlighters.jpg", "Highlighters", 3.99, "highlighterProd"),
-        new CardContent("/img/backpack.jpg", "Backpack", 28.99, "backpackProd"),
-        new CardContent("/img/no2pencil.jpg", "No. 2 Pencil", 7.99, "pencilProd"),
-        new CardContent("/img/calculator.jpg", "Calculator", 10.99, "calculatorProd"),
-        new CardContent("/img/laptop.jpg", "Laptop", 129.99, "laptopProd"),
-        new CardContent("/img/postit.jpg", "Post-it Notes", 6.99, "notesProd")
+        new CardContent("../img/SpiralNotebook.jpg", "Spiral Notebook", 12.99, "notebookProd"),
+        new CardContent("../img/Pens.jpg", "Ballpoint Pens", 5.99, "penProd"),
+        new CardContent("../img/highlighters.jpg", "Highlighters", 3.99, "highlighterProd"),
+        new CardContent("../img/backpack.jpg", "Backpack", 28.99, "backpackProd"),
+        new CardContent("../img/no2pencil.jpg", "No. 2 Pencil", 7.99, "pencilProd"),
+        new CardContent("../img/calculator.jpg", "Calculator", 10.99, "calculatorProd"),
+        new CardContent("../img/laptop.jpg", "Laptop", 129.99, "laptopProd"),
+        new CardContent("../img/postit.jpg", "Post-it Notes", 6.99, "notesProd")
     ];
     
     
