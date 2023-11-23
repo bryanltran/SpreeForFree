@@ -8,6 +8,7 @@
     <script src="./scripts/script.js" defer></script>
     <script src="../scripts/loginScript.js" defer></script>
     <script src="../scripts/cartScript.js" defer></script>
+    <script src="../scripts/checkoutScript.js" defer></script>
 
     
     <title>Cart</title>
@@ -41,6 +42,14 @@
     <!-- * * * * * * * * * * CART * * * * * * * * * * -->
     <section class="cart" id="cart">
         <h2>Cart</h2>
+        <p class="accountInformation" id="accountTokens" style="color: red; font-size: 16px; font-weight: bold;"></p>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var p2 = document.createElement('p');
+                p2.innerText = "Current Number of Tokens: " + sessionStorage.getItem("Tokens");
+                document.getElementById("accountTokens").appendChild(p2);
+            });
+        </script>
         <div class="cart__items" id="cart_items">
 
         </div>
