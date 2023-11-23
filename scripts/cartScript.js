@@ -1,14 +1,14 @@
 const cartContainer = document.getElementById('cart_items');
 
 var prodMatrix = [
-    ["Spiral Notebook", 12.99, "../img/SpiralNotebook.jpg", "notebookProd"],
-    ["Ballpoint Pens", 5.99, "../img/Pens.jpg", "penProd"],
-    ["Highlighters", 3.99, "../img/highlighters.jpg", "highlighterProd"],
-    ["Backpack", 28.99, "../img/backpack.jpg", "backpackProd"],
-    ["No. 2 Pencil", 7.99, "../img/no2pencil.jpg", "pencilProd"],
-    ["Calculator", 10.99, "../img/calculator.jpg", "calculatorProd"],
-    ["Laptop", 129.99, "../img/laptop.jpg", "laptopProd"],
-    ["Post-it Notes", 6.99, "../img/postit.jpg", "notesProd"]
+    ["Spiral Notebook", 12.99, "/img/SpiralNotebook.jpg", "notebookProd"],
+    ["Ballpoint Pens", 5.99, "/img/Pens.jpg", "penProd"],
+    ["Highlighters", 3.99, "/img/highlighters.jpg", "highlighterProd"],
+    ["Backpack", 28.99, "/img/backpack.jpg", "backpackProd"],
+    ["No. 2 Pencil", 7.99, "/img/no2pencil.jpg", "pencilProd"],
+    ["Calculator", 10.99, "/img/calculator.jpg", "calculatorProd"],
+    ["Laptop", 129.99, "/img/laptop.jpg", "laptopProd"],
+    ["Post-it Notes", 6.99, "/img/postit.jpg", "notesProd"]
 ];
 
 function addProduct(id)
