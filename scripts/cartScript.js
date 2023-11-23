@@ -140,6 +140,7 @@ function removeProduct(id)
             // If there is only one of this item, remove it from the cart product
             if (cartProd[i].quantity === 1)
             {
+                
                 // Remove element from array
                 cartProd = cartProd.filter(function (element)
                 {
@@ -156,6 +157,9 @@ function removeProduct(id)
             }
         }
     }
+
+    updateCartTotal(cartProd);
+
     // Store updated cart products
     sessionStorage.setItem("cartProducts", JSON.stringify(cartProd));
     if (checkSavedCartFeature())
@@ -211,4 +215,16 @@ function addSessionItemsToSavedCart(cartProductsArray)
     {
         return false;
     }
+}
+
+function updateCartTotal(cartProd) {
+    // Calculate the total cost of all items in the cart
+    var cartTotal = 0;
+
+    for (var i = 0; i < cartProd.length; i++) {
+        cartTotal += parseFloat(cartProd[i].price) * cartProd[i].quantity;
+    }
+
+    // Update the total cost in sessionStorage
+    sessionStorage.setItem("totalCost", cartTotal);
 }
