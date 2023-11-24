@@ -197,6 +197,7 @@ function checkSavedCartFeature()
     }
     else
     {
+        sessionStorage.setItem("Tokens", 0);
         return false;
     }
 }
