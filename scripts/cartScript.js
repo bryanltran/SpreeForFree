@@ -1,3 +1,5 @@
+checkSavedCartFeature();
+
 const cartContainer = document.getElementById('cart_items');
 
 var prodMatrix = [
