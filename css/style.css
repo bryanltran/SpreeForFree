@@ -133,6 +133,25 @@ li {
     transform: scale(1.1);
 }
 
+/*
+    HOME
+*/
+
+
+
+.main__header {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .main__heading {
+    font-size: 3em;
+    color: var(--clr-accent); 
+    font-family: 'Arial', sans-serif; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+  
+  
 
 /*
     LOGIN
