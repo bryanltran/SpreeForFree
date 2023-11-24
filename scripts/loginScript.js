@@ -159,3 +159,20 @@ function deleteAccount()
     window.location = "../index.html";
     return false;
 }
+
+
+function resetLocalStorage() {
+    // Ask for confirmation
+    var confirmReset = confirm('Are you sure you want to reset the website?');
+
+    // If the user confirms, clear local storage
+    if (confirmReset) {
+        localStorage.clear();
+        sessionStorage.clear();
+        alert('Local storage has been reset.');
+        window.location.href="../index.html"
+    } else {
+        alert('Reset canceled.');
+    }
+}
+
