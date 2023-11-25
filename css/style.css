@@ -402,6 +402,8 @@ li {
 }
 
 .cartItemContainer {
+    display: flex;
+    flex-direction: column;
     background-color: #042f5c;
     flex: 70%;
     margin: 0px 10px;
@@ -413,4 +415,30 @@ li {
     background-color: white;
     margin: 0px 10px;
 }
+
+.cartItemNamePrice {
+    flex: 40%;
+    background-color: #042f5c;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+
+.cartItemQuantity {
+    flex: 20%;
+    font-size: 15px;
+    color: white;
+    background-color: #042f5c;
+    padding-left: 70px;
+    padding-top: 5px;
+}
+
+.cartButton {
+    flex: 40%;
+    background-color: #042f5c;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
 
