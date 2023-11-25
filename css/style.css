@@ -400,3 +400,17 @@ li {
     margin: 20px;
     border: 5px solid #042f5c;
 }
+
+.cartItemContainer {
+    background-color: #042f5c;
+    flex: 70%;
+    margin: 0px 10px;
+    border-radius: 10px;
+}
+
+.cartImgContainer {
+    flex: 30%;
+    background-color: white;
+    margin: 0px 10px;
+}
+
