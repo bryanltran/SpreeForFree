@@ -466,3 +466,18 @@ li {
     height: 100%;
 }
 
+.cartRemoveButton {
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    border: 3px solid #306BAC;
+    color: #306BAC;
+    background-color: #042f5c;
+}
+
+.cartRemoveButton:hover {
+    background-color: red;
+    border: 3px solid #306BAC;
+    color: #306BAC;
+}
+
