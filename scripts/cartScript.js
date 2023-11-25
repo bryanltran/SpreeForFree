@@ -91,18 +91,20 @@ function createItemHtml(product)
 {
     return `
         <div class="cartItem">
-            <div>
+            <div class="cartImgContainer">
                 <img class="cartImg" src=${product.img} alt="Product">
             </div>
             <div class="cartItemContainer">
-                <div class="cartItemName">
-                    <b>${product.name}</b>
-                </div>
-                <div class="cartItemPrice">
-                    <b>${product.price}</b>
+                <div class = "cartItemNamePrice">
+                    <div class="cartItemName">
+                        <b>${product.name}</b>
+                    </div>
+                    <div class="cartItemPrice">
+                        <b>$ ${product.price}</b>
+                    </div>
                 </div>
                 <div class="cartItemQuantity">
-                    <b>${product.quantity}</b>
+                    <b>Quantity: ${product.quantity}</b>
                 </div>
                 <div class="cartButton">
                     <button id=${product.id} class="cartRemoveButton" type="submit" onclick="removeProduct(this.id);">Remove Item</button>
@@ -183,7 +185,7 @@ function createTotalHTML()
     // Return HTML to output the total cost
     return `
         <div class="totalCost">
-            <h3 class="total">Total: ${cartTotal.toFixed(2)}</h3>
+            <h3 class="total">Total: $ ${cartTotal.toFixed(2)}</h3>
         </div>
     `;
 }
