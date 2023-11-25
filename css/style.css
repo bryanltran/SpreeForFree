@@ -380,3 +380,23 @@ li {
     line-height: 1.5; 
     
 }
+
+/*
+    CART
+*/
+
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: space between;
+    width: 700px;
+    height: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px;
+    border: 5px solid #042f5c;
+}
