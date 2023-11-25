@@ -42,7 +42,7 @@
     <!-- * * * * * * * * * * CART * * * * * * * * * * -->
     <section class="cart" id="cart">
         <h2>Cart</h2>
-        <p class="accountInformation" id="accountTokens" style="color: red; font-size: 16px; font-weight: bold;"></p>
+        <p class="accountInformation" id="accountTokens" style="color: red; font-size: 16px; font-weight: bold; display: block; margin: 15px auto;"></p>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 var p2 = document.createElement('p');
@@ -50,11 +50,11 @@
                 document.getElementById("accountTokens").appendChild(p2);
             });
         </script>
-        <div class="cart__items" id="cart_items">
 
+        <div class="cart__items" id="cart_items">
         </div>
 
-        <button class="primary-btn" id="checkoutButton" onclick="return checkOut()">Checkout</button>
+        <button class="primary-btn" id="checkoutButton" style="display: block; margin: 30px auto;" onclick="return checkOut()">Checkout</button>
     </section>
 
      <!-- * * * * * * * * * * FOOTER * * * * * * * * * * -->
