@@ -1,3 +1,5 @@
+checkSavedCartFeature();
+
 const cartContainer = document.getElementById('cart_items');
 
 var prodMatrix = [
@@ -197,6 +199,7 @@ function checkSavedCartFeature()
     }
     else
     {
+        sessionStorage.setItem("Tokens", 0);
         return false;
     }
 }
